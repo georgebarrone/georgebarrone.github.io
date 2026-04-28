@@ -1,1 +1,335 @@
-"coming soon"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Barrone | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a; 
+            --card-bg: #1e293b;
+            --accent-blue: #7dd3fc; 
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111827;
+            padding: 4rem 1rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .profile-placeholder {
+            width: 160px;
+            height: 160px;
+            background-color: var(--card-bg);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue);
+            font-weight: bold;
+            border: 3px dashed var(--accent-blue);
+            overflow: hidden;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto 3rem;
+            padding: 0 1.5rem;
+        }
+
+        .summary-box {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        h2 {
+            color: var(--accent-blue);
+            font-size: 1.8rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 180px;
+            background-color: #000;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Work Experience Details */
+        details {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 1px solid #334155;
+            margin-bottom: 1rem;
+        }
+
+        summary {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::after { content: "▼"; font-size: 0.8rem; }
+        details[open] summary::after { content: "▲"; }
+
+        .job-title { font-weight: bold; color: #fff; display: block; font-size: 1.1rem; }
+        .company { color: var(--accent-blue); }
+        .date { font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.5rem; }
+        
+        ul { padding-left: 1.2rem; color: var(--text-dim); }
+        li { margin-bottom: 0.4rem; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-blue);
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--accent-blue);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="profile.jpg" alt="George Barrone" style="
+            width: 160px; 
+            height: 160px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            display: block; 
+            margin: 0 auto 1.5rem; 
+            border: 3px solid var(--accent-blue);
+            background-color: var(--card-bg);
+        ">
+        <h1>George Barrone</h1>
+        <p>Fullstack Developer | Cal State LA</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/georgebarrone" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/george-barrone-a9759421a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="summary-box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="card">
+                <span class="company">California State University, Los Angeles</span>
+                <span class="job-title">B.S. in Computer Science</span>
+                <p>Focused on Software Engineering and Data Science.</p>
+            </div>
+            <div class="card">
+                <span class="company">South Pasadena High School</span>
+                <span class="job-title">High School Diploma</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                
+                <div class="card">
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                            src="https://www.youtube.com/embed/8yT373ldLY0" 
+                            title="The Platform's Labyrinth VR Demo" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>The Platform's Labyrinth</h3>
+                    <p>A high-stakes VR experience developed in Unity utilizing the XR Interaction Toolkit and custom locomotion logic.</p>
+                    <a href="https://georgebarrone.itch.io/the-platforms-labyrinth" target="_blank" class="btn">View on Itch.io</a>
+                </div>
+
+                <div class="card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #075985, #7dd3fc); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <h3>Eagle Nav</h3>
+                    <p>A mobile application built with Flutter featuring custom path-tracing and navigation logic for the Cal State LA campus.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="https://apps.apple.com/us/app/eaglenav/id6762229307" target="_blank" class="btn" style="background: var(--accent-blue); color: var(--bg-color); font-weight: bold;">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="https://github.com/georgebarrone/Eagle-Nav" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> Source
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="height: 120px; background: #334155; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--accent-blue);"></i>
+                    </div>
+                    <h3>Ensemble Rainfall Predictor</h3>
+                    <p>A data science project utilizing Random Forest and AdaBoost ensemble methods to classify and predict rainfall patterns.</p>
+                    <a href="https://github.com/georgebarrone/DataScience_Project" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div style="height: 120px; background: #334155; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                        <i class="fas fa-network-wired" style="font-size: 3rem; color: var(--accent-blue);"></i>
+                    </div>
+                    <h3>Network Packet Analysis</h3>
+                    <p>Implementation of Distance Vector routing protocols and socket programming, with deep-dive analysis using Wireshark.</p>
+                    <a href="https://github.com/georgebarrone/ProgrammingAssignment2" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <details>
+                <summary>View Career History</summary>
+                
+                <div class="work-item">
+                    <span class="job-title">Concessions Coordinator</span>
+                    <span class="company">Landmark Theatres</span>
+                    <span class="date">Jan 2026 – Present</span>
+                    <ul>
+                        <li><strong>Floor Operations Management:</strong> Serve as the primary point of contact for daily operations, maintaining high standards of cleanliness and efficiency.</li>
+                        <li><strong>Inventory & Prep Oversight:</strong> Direct preparation and inventory restocking to prevent product shortages and optimize sales during peak periods.</li>
+                        <li><strong>Leadership:</strong> Coordinate staff break schedules to maintain continuous coverage while acting as the lead authority for resolving customer issues, refunds, and exchanges.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <span class="job-title">Usher / Concessions</span>
+                    <span class="company">Landmark Theatres</span>
+                    <span class="date">Aug 2024 – Present</span>
+                    <ul>
+                        <li>Manage theatre logistics and guest relations in a high-stress, fast-paced environment.</li>
+                        <li>Maintain a calm and professional demeanor while handling high-volume customer traffic and venue maintenance.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <span class="job-title">iFixit Contributor</span>
+                    <span class="company">iFixit (Contract)</span>
+                    <span class="date">Feb 2024 – May 2024</span>
+                    <ul>
+                        <li>Authored a device page for the HP 14 G3 Chromebook, providing technical specifications and general information for a global audience.</li>
+                        <li>Created a detailed part replacement guide for the Nintendo Wii Nunchuk, utilizing technical writing skills and high-quality photography.</li>
+                        <li>Collaborated with the iFixit technical writing team to ensure hardware procedures were accessible and accurate.</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/george-barrone-a9759421a/overlay/Position/2391575767/treasury?profileId=ACoAADdCVhMBVrdvYNGHHvij2gliiMDxv7_lXu0" target="_blank" class="btn">View iFixit Profile</a>
+                </div>
+
+                <div class="work-item">
+                    <span class="job-title">Tech Sales Associate</span>
+                    <span class="company">Staples</span>
+                    <span class="date">Aug 2023 – Sep 2024</span>
+                    <ul>
+                        <li>Engaged customers on the sales floor to provide hardware and software recommendations.</li>
+                        <li>Maintained floor organization, stocked inventory, and performed accurate cashiering duties.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <span class="job-title">Math Assistant Instructor</span>
+                    <span class="company">SF Math Circle</span>
+                    <span class="date">Oct 2022 – Dec 2022</span>
+                    <ul>
+                        <li>Facilitated remote group math exercises for students aged 6 to 13.</li>
+                        <li>Assigned problem-solving tasks, monitored student progress, and provided 1-on-1 assistance when students were stuck.</li>
+                        <li>Encouraged collaborative learning and peer-to-peer discussions in a virtual environment.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <span class="job-title">Host & Cook</span>
+                    <span class="company">Buffalo Wild Wings</span>
+                    <span class="date">Jul 2019 – Jan 2020</span>
+                    <ul>
+                        <li><strong>Hospitality:</strong> Greeted and seated guests, managed takeout orders, and handled incoming inquiries with a focus on accuracy and timeliness.</li>
+                        <li><strong>Operations:</strong> Executed food preparation tasks according to established recipes and maintained rigorous kitchen cleanliness standards.</li>
+                        <li>Collaborated with team members to ensure smooth service and timely delivery of orders.</li>
+                    </ul>
+                </div>
+
+            </details>
+        </section>
+
+    </div>
+
+</body>
+</html>
