@@ -18,7 +18,7 @@ A high-stakes VR experience built in Unity using the XR Interaction Toolkit and 
 A Data Science project applying Random Forest and AdaBoost ensemble methods to classify and predict rainfall patterns. [View on GitHub](https://github.com/georgebarrone/DataScience_Project).
 
 **Network Packet Analysis**
-An exploration of Distance Vector routing protocols and socket programming, with packet-level analysis conducted in Wireshark. [View on GitHub](https://github.com/georgebarrone/ProgrammingAssignment2).
+An exploration of Distance Vector routing protocols and socket programming, with packet-level analysis. [View on GitHub](https://github.com/georgebarrone/ProgrammingAssignment2).
 
 ---
 
