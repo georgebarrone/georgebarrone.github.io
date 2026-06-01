@@ -629,7 +629,8 @@ html[data-theme="dark"] .theme-toggle-thumb {
     display: block;
     margin-top: 12px;
     margin-bottom: 0;
-    height: 120px;
+    aspect-ratio: 16 / 9;
+    height: auto;
     object-fit: cover;
     border: 1px solid var(--line-soft);
     background: var(--surface-strong);
